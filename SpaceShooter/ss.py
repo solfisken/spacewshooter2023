@@ -141,14 +141,14 @@ class Rock(pygame.sprite.Sprite):
 class Shootingenemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
-        # Load the enemy ship image
+        # load the enemy ship image
         image = pygame.image.load(
             "/home/kvb/src/Hack2023/SpaceShooter/images/enemy/enemy.png"
         )
-        #match size spaceship
+        # match size spaceship
         image_scale = spaceship.rect.width / image.get_rect().width
 
-        # Scale the enemy ship image
+        # scale the enemy ship image
         new_width = int(image.get_rect().width * image_scale)
         new_height = int(image.get_rect().height * image_scale)
         scaled_size = (new_width, new_height)
