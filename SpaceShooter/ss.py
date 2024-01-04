@@ -30,7 +30,7 @@ class Spaceship(pygame.sprite.Sprite):
 
         # ship
         image = pygame.image.load(
-            "/home/kvb/src/Hack2023/SpaceShooter/images/spaceship.png"
+            "/SpaceShooter/images/spaceship.png"
         )
         image_scale = 40 / image.get_rect().width
         new_width = int(image.get_rect().width * image_scale)
@@ -43,7 +43,7 @@ class Spaceship(pygame.sprite.Sprite):
         # for damage
         self.invincibility_frames = 0
         damage_image = pygame.image.load(
-            "/home/kvb/src/Hack2023/SpaceShooter/images/damage.png"
+            "/SpaceShooter/images/damage.png"
         )
         image_scale = 80 / damage_image.get_rect().width
         new_width = damage_image.get_rect().width * image_scale
@@ -91,7 +91,7 @@ class Rock(pygame.sprite.Sprite):
         size = random.choice(["big", "small"])
         number = random.randint(1, 2)
         self.image = pygame.image.load(
-            f"/home/kvb/src/Hack2023/SpaceShooter/images/rock/{color}_{size}_{number}.png"
+            f"/SpaceShooter/images/rock/{color}_{size}_{number}.png"
         )
 
         # hits and score
@@ -143,7 +143,7 @@ class Shootingenemy(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         # load the enemy ship image
         image = pygame.image.load(
-            "/home/kvb/src/Hack2023/SpaceShooter/images/enemy/enemy.png"
+            "/SpaceShooter/images/enemy/enemy.png"
         )
         # match size spaceship
         image_scale = spaceship.rect.width / image.get_rect().width
@@ -244,11 +244,11 @@ class Powerup(pygame.sprite.Sprite):
         self.powerup_type = powerup_type
         if powerup_type == "shield":
             self.image = pygame.image.load(
-                "/home/kvb/src/Hack2023/SpaceShooter/images/powerup/shield_blue.png"
+                "/SpaceShooter/images/powerup/shield_blue.png"
             )
         else:
             self.image = pygame.image.load(
-                "/home/kvb/src/Hack2023/SpaceShooter/images/powerup/pill_red.png"
+                "/SpaceShooter/images/powerup/pill_red.png"
             )
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
@@ -281,7 +281,7 @@ shooting_enemies_group = pygame.sprite.Group()
 enemy_bullets_group = pygame.sprite.Group()
 
 # background
-bg = pygame.image.load("/home/kvb/src/Hack2023/SpaceShooter/images/background.jpg")
+bg = pygame.image.load("/SpaceShooter/images/background.jpg")
 
 
 # create Spaceship
